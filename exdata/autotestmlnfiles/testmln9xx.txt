@@ -1,0 +1,10 @@
+#domains
+dom1={0,1}
+
+#predicates
+R(dom1)
+S(dom1,dom1)
+T(dom1)
+
+#formulas
+(R(x) | S(x,y) | T(y)) ::0.00145

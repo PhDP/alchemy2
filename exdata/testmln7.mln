@@ -1,0 +1,20 @@
+dom1={AA,BB,CC,DD,EE,FF,GG,HH,II,JJ,KK,LL,MM,NN,OO,PP,QQ,RR,SS}
+dom2={A,B,C,D,E,F,G}
+dom3 = {X,Y,Z,U,V,W}
+
+//predicate declarations
+R1(dom1)
+S1(dom1,dom1)
+T1(dom1,dom2)
+Q1(dom1)
+P1(dom1,dom2)
+K1(dom3,dom1)
+
+//formulas
+0.00145 R1(x) v S1(x,y)
+
+0.0013 S1(y,x) v T1(y,z)
+
+0.00369 Q1(x) v K1(y,x) v S1(x,z)
+
+0.0043 P1(t,r) v Q1(t)

@@ -1,0 +1,27 @@
+person = { Ada, Alan,AA,BB,CC,DD,EE,FF,GG,HH,II,JJ,LL,MM }
+
+phase = { Pre_Quals, Post_Quals }
+
+position = { Faculty, Faculty_emeritus }
+
+title = { T1,T2,T3,T4,T5 }
+
+//predicate declarations
+professor(person)
+student(person)
+advisedBy(person, person)
+inPhase(person, phase)
+hasPosition(person, position)
+
+//formulas
+0.00145 professor(p) <=> !student(p)
+
+0.0013 advisedBy(s,p) => student(s) ^ professor(p)
+
+0.00369 inPhase(s, ph) => student(s)
+
+0.0043 hasPosition(p, pos) => professor(p)
+
+0.0046 advisedBy(s,p) ^ hasPosition(p,q) => inPhase(s,r)
+
+0.0053 publication(t,p) ^ publication(t,s) ^ professor(p) ^ student(s) ^ !(s = p) => advisedBy(s,p)

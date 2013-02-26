@@ -1,0 +1,18 @@
+page = { P1,P2,P3,P4,P5,P6,P7,P8,P9,P10 }
+
+class = { C1, C2,C3,C4,C5 }
+
+word = { A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+
+//Predicates
+PageClass(page,class)
+Has(page,word)
+Linked(page,page)
+
+0.0345 Has(p,w) => PageClass(p,c)
+
+// Pages of class C1 link to pages of class C2
+0.014 PageClass(p1,c1) ^ Linked(p1,p2) => PageClass(p2,c2)
+
+//If a links to b, then b is also likely link to a
+0.0074322 Linked(p1,p2) => Linked(p2,p1)

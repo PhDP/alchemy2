@@ -1,0 +1,17 @@
+#domains
+dom1={0,1}
+dom2={A,B}
+dom3 = {X,Y}
+
+#predicates
+R(dom1)
+S(dom1,dom1)
+T(dom1,dom2)
+Q(dom1)
+P(dom1,dom2)
+K(dom3,dom1)
+
+
+#formulas
+(R(x) | S(x,y)) ::0.5
+(S(x,y) | T(y,z)) ::0.25

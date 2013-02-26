@@ -1,0 +1,28 @@
+protein={1,2}
+location_id = {1,2}
+pc_id = {1,2}
+enzyme_id = {1,2}
+complex_id = {1,2}
+phenotype_id = {1,2}
+func_id = {1,2}
+
+//predicate declarations
+location(protein,location_id)
+interaction(protein,protein)
+protein_class(protein,pc_id)
+enzyme(protein,enzyme_id)
+complex(protein,complex_id)
+phenotype(protein,phenotype_id)
+function(protein,func_id)
+
+
+0.025 location(p1,p2) v function(p1,p3)
+
+0.80 function(p1,+f1) v !function(p1,+f2)
+
+
+0.5 !interaction(p1,p2) v function(p2,f) v !function(p1,f)
+
+0.25 !interaction(p1,p2) v !function(p1,f) v !function(p2,f)
+
+0.95 interaction(p1,p2) v !interaction(p2,p1) v function(p2,f)

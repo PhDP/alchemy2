@@ -1,0 +1,4 @@
+Smokes(1)
+Friends(0,1)
+Friends(1,2)
+Cancer(1)

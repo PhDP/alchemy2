@@ -1,0 +1,11 @@
+#domains
+dom1={0,1,2}
+
+#predicates
+Smokes(dom1)
+Friends(dom1,dom1)
+Cancer(dom1)
+
+#formulas
+(!Smokes(x) | !Friends(x,y) | Smokes(y)) ::0.25
+(!Smokes(x) | Cancer(x)) ::0.75

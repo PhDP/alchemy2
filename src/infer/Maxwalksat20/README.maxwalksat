@@ -1,0 +1,66 @@
+MaxWalksat software package downloaded from 
+http://www.cs.washington.edu/homes/kautz/walksat/.
+
+maxwalksat -targetcost 30 -noise 20 100 -cutoff 2000 -tries 20 < file
+
+Like walksat, but stop when the sum of the weights of the unsat
+clauses reaches the targetcost (by default 0).
+
+The highest-weighted clauses are considered to be "hard" constraints.
+Unsatisfied hard clauses are always picked to fix before unsatisfied
+ordinary clauses.
+
+The only way that a hard clause can become unsatisfied once it is
+satisfied is under one of the following conditions:
+(1) the ONLY way to satisfy the chosen clause is to break some hard
+clause, or
+(2) a random walk move breaks the hard clause.
+
+Note that if a hard clause is broken it is most likely immediately
+fixed on the next flip (since that clause has highest priority).
+
+To eliminate the possibility that a random walk move that fixes a soft
+clause breaks a hard clause, include the 
+	-hard
+option.  
+(Note: we deliberately allow a random walk move that fixes a hard
+clause to break another hard clause - otherwise it would be difficult
+to find a "feasible" assignment that satisfies all the hard clauses.)
+
+Accepts either .cnf format or .wcnf format as input.
+
+
+cnf format (not weighted - each clause counts as 1)
+
+c comments
+p cnf NUMBER_VARIABLES NUMBER_CLAUSES
+LIT LIT ... 0
+LIT LIT ... 0
+
+Ex:
+
+c This is a 
+c test file.
+p cnf 3 2
+1 -2 0
+-3 2 -1 0
+
+
+wcnf format (weighted):
+
+
+c comments
+p wcnf NUMBER_VARIABLES NUMBER_CLAUSES
+WEIGHT LIT LIT ... 0
+WEIGHT LIT LIT ... 0
+
+Ex:
+
+c This is a weighted test file.
+c The first and third clauses are hard.
+p wcnf 3 3
+100 2 2 0
+5 1 -2 0
+100 -3 2 -1 0
+
+
