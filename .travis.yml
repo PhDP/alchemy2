@@ -1,0 +1,6 @@
+language: cpp
+os:
+  - linux
+
+script: bash install.sh
+
