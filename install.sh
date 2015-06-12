@@ -4,7 +4,7 @@
 sudo apt-get install g++-4.4 flex
 
 # Make the folder to put the bin
-makedir -p bin/obj
+mkdir -p bin/obj
 
 # Download & install Bison 2
 wget http://ftp.gnu.org/gnu/bison/bison-2.0.tar.gz
