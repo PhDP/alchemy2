@@ -15,7 +15,7 @@ make
 sudo make install
 cd ..
 rm bison-2.0.tar.gz
-rm -r bison-2.0
+rm -rf bison-2.0
 
 # Compile Alchemy
 cd src
