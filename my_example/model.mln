@@ -1,0 +1,10 @@
+p = {Jerry,Elaine,George}
+
+Smokes(p)
+Friends(p,p)
+Cancer(p)
+
+1.5 (!Smokes(x) v Cancer(x))
+2.0 (!Friends(x,y) v !Friends(y,z) v Friends(x,z))
+1.1 (!Smokes(x) v !Friends(x,y) v Smokes(y))
+
