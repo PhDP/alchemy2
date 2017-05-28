@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install dependencies
-sudo apt-get install g++-4.4 flex
+sudo apt-get install g++ flex
 
 # Make the folder to put the bin
 mkdir -p bin/obj

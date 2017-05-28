@@ -24,8 +24,7 @@ Since alchemy is the reference implementation for markov logic, I tried to make
 as few changes as possible. I only made a few modifications to simplify
 compilation:
 
-* I add files for a full example in *examples*.
-* I changed g++ for g++-4.4 in the makefile. Definitely not necessary, but it's convenient on Ubuntu with many versions of gcc installed.
+* I added files for a full example in *examples*.
 * I added install.sh, README.md, .travis.cl, and .gitignore.
 * I added the manual and tutorial PDF files in the *doc* folder.
 

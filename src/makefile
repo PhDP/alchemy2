@@ -19,7 +19,7 @@ CLFLAGS=-g
 
 BASEDIR=..
 
-GPP=g++-4.4
+GPP=g++
 FLEX=flex
 BISON=bison
 
@@ -397,7 +397,7 @@ depend:
 
 ############ Everything below here is subject to SUDDEN DEATH #####
 #
-# dependencies generated on:  Thu Jun 11 19:50:46 EDT 2015
+# dependencies generated on:  Sun May 28 07:35:03 EDT 2017
 #
 ../bin/obj/arguments.o: ../src/util/arguments.cpp ../src/util/arguments.h
 
